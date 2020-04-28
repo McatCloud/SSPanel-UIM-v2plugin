@@ -9,7 +9,7 @@ red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'
 plain='\033[0m'
-software=(Docker Docker_Caddy Docker_Caddy_cloudflare)
+software=(Docker Docker_Docker_Caddy_cloudflare)
 operation=(install update_config update_image logs)
 # Make sure only root can run our script
 [[ $EUID -ne 0 ]] && echo -e "[${red}Error${plain}] This script must be run as root!" && exit 1
@@ -475,7 +475,7 @@ services:
         max-file: "3"
 
   caddy:
-    image: armeoun/v2_tlsws:caddy
+    image: armeoun/v2_tlsws:caddytls
     restart: always
     environment:
       - ACME_AGREE=true
@@ -560,7 +560,7 @@ services:
         max-file: "3"
 
   caddy:
-    image: armeoun/v2_tlsws:caddy
+    image: armeoun/v2_tlsws:caddytls
     restart: always
     environment:
       - ACME_AGREE=true
