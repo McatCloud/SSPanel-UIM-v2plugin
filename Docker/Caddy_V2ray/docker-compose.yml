@@ -32,7 +32,7 @@ services:
         max-file: "3"
 
   caddy:
-    image: armeoun/v2_tlsws:caddy
+    image: armeoun/v2_tlsws:caddytls
     restart: always
     environment:
       - ACME_AGREE=true
