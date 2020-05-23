@@ -46,6 +46,6 @@ services:
       - V2RAY_OUTSIDE_PORT=443
       - TZ=Asia/Shanghai
     network_mode: "host"
-    volumes:
+    volume:
       - ./.caddy:/root/.caddy
       - ./Caddyfile:/etc/Caddyfile
